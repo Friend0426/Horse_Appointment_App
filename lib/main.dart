@@ -5,11 +5,11 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:hourses/Home.dart';
 import 'package:hourses/Login.dart';
 import 'package:hourses/helper/My_Button.dart';
-
+import 'firebase_options.dart';
 void main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
 
   runApp(const MyApp());
 }
